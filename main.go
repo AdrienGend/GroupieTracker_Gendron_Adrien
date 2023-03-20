@@ -23,6 +23,9 @@ func recherche(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	// Définit les routes de votre application
+	css := http.FileServer(http.Dir("css"))
+	http.Handle("/css/", http.StripPrefix("/css/", css))
+
 	http.HandleFunc("/", accueil)
 	http.HandleFunc("/recherche", recherche)
 	http.HandleFunc("/pokemon", getPokemon) // Ajouter cette ligne pour la route "/pokemon"

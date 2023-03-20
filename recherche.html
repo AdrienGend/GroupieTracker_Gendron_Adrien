@@ -5,11 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon Finder - Recherche</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="script.js"></script>
 </head>
 <body>
-    
+    <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#" class="active">Recherche</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <h1>Recherche de Pokemon</h1>
+        <form onsubmit="return false;">
+          <label for="pokemon">Entrez le nom d'un Pokemon:</label>
+          <input type="text" id="pokemon" name="pokemon">
+          <button type="submit" onclick="rechercherPokemon()">Rechercher</button>
+        </form>
+        <div id="resultat"></div>
+      </main>
+      <footer>
+        <p>Copyright © 2023</p>
+      </footer>
       
 </body>
 </html>
